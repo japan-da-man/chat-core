@@ -9,9 +9,11 @@ Rust で開発するチャット API です。Slack/LINE のような会話型�
 ## Core Direction
 
 - `Conversation` を中心に DM / グループを共通モデルで扱う
+- 更新系と参照系を分離する軽量 `CQRS` を採用する
 - メッセージは `message_id` と会話内 `sequence_no` を併用して扱う
 - 既読は `last_read_message_seq` で管理する
 - 正本は PostgreSQL とし、WebSocket/SSE は配信手段として扱う
+- 会話作成時も WebSocket で通知し、受信側は通知をきっかけに DB 正本から会話情報を再取得する
 - 再送は `client_message_id` による冪等性で吸収する
 - Push 通知や検索更新などの副作用は非同期化し、`transactional outbox` を前提にする
 

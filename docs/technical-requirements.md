@@ -9,6 +9,7 @@
 現時点の採用方針:
 
 - Language: Rust
+- Architecture style: layered architecture + lightweight CQRS
 - Web framework: axum
 - Async runtime: tokio
 - Database access: sqlx
