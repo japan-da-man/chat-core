@@ -119,3 +119,15 @@ Phase 1 で対象にする要求:
 - 通知
 - 検索
 - スレッド
+
+## Implementation Flow
+
+実装は次の順で進める想定です。
+
+1. 未確定論点を絞り込み、MVP の前提を固定する
+2. `Cargo.toml`、`src/`、`migrations/`、`tests/` などの土台を作る
+3. `users`、`conversations`、`conversation_members`、`messages`、`outbox_events` の初期スキーマを作る
+4. 会話作成、メッセージ送信、既読更新の command 側を実装する
+5. 会話一覧、会話詳細、メッセージ一覧、未読件数の query 側を実装する
+6. `conversation.created` と message event の WebSocket 通知を実装し、受信側が DB 正本を再取得する前提を成立させる
+7. integration test で順序保証、冪等送信、再取得による整合回復を確認する

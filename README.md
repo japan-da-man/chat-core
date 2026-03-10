@@ -37,6 +37,17 @@ Phase 1 では次を対象にします。
 - [Requirements](docs/requirements.md): MVP スコープ、要求整理、未確定論点
 - [Technical Requirements](docs/technical-requirements.md): 技術スタック、開発環境、運用前提
 
+## Next Steps
+
+この後は次の流れで進めます。
+
+1. 未確定論点を絞って確定する
+2. Rust プロジェクトとディレクトリ構成を作る
+3. PostgreSQL migration と基本スキーマを作る
+4. MVP の write path と read path を実装する
+5. WebSocket 通知と outbox worker をつなぐ
+6. 並行送信、再送、既読更新の integration test を整備する
+
 ## Current Stack Direction
 
 現時点の採用方針は次です。
