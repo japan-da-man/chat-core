@@ -6,37 +6,37 @@ Rust プロジェクトの土台を作り、以降の schema / command / query �
 
 ## やること
 
-- [ ] Rust プロジェクトを初期化する
-- [ ] crate は単一 package で開始する
-- [ ] `src/` 配下に次のディレクトリを作る
-- [ ] `src/presentation`
-- [ ] `src/application`
-- [ ] `src/domain`
-- [ ] `src/infrastructure`
-- [ ] `src/shared`
-- [ ] `tests/` ディレクトリを作る
-- [ ] `migrations/` ディレクトリを作る
-- [ ] `Cargo.toml` に MVP に必要な依存を追加する
-- [ ] `axum`
-- [ ] `tokio`
-- [ ] `tower`
-- [ ] `tower-http`
-- [ ] `sqlx`
-- [ ] `serde`
-- [ ] `tracing`
-- [ ] `tracing-subscriber`
-- [ ] `thiserror`
-- [ ] `anyhow`
-- [ ] `validator` または独自バリデーション方針を決める
-- [ ] `uuid` または `ulid` を追加する
-- [ ] 環境変数を読む設定モジュールを作る
-- [ ] `APP_HOST`
-- [ ] `APP_PORT`
-- [ ] `DATABASE_URL`
-- [ ] `INTERNAL_API_BEARER_TOKEN`
-- [ ] `RUST_LOG`
-- [ ] `APP_ENV`
-- [ ] `SEARCH_BACKEND`
+- [x] Rust プロジェクトを初期化する
+- [x] crate は単一 package で開始する
+- [x] `src/` 配下に次のディレクトリを作る
+- [x] `src/presentation`
+- [x] `src/application`
+- [x] `src/domain`
+- [x] `src/infrastructure`
+- [x] `src/shared`
+- [x] `tests/` ディレクトリを作る
+- [x] `migrations/` ディレクトリを作る
+- [x] `Cargo.toml` に MVP に必要な依存を追加する
+- [x] `axum`
+- [x] `tokio`
+- [x] `tower`
+- [x] `tower-http`
+- [x] `sqlx`
+- [x] `serde`
+- [x] `tracing`
+- [x] `tracing-subscriber`
+- [x] `thiserror`
+- [x] `anyhow`
+- [x] `validator` または独自バリデーション方針を決める
+- [x] `uuid` または `ulid` を追加する
+- [x] 環境変数を読む設定モジュールを作る
+- [x] `APP_HOST`
+- [x] `APP_PORT`
+- [x] `DATABASE_URL`
+- [x] `INTERNAL_API_BEARER_TOKEN`
+- [x] `RUST_LOG`
+- [x] `APP_ENV`
+- [x] `SEARCH_BACKEND`
 - [ ] `main.rs` でアプリ起動、router 初期化、graceful shutdown の土台を書く
 - [ ] request id / tracing / CORS / compression の middleware 配置方針を決める
 - [ ] `cargo fmt`、`cargo clippy`、`cargo test` を実行しやすい状態にする
