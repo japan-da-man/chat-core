@@ -3,6 +3,7 @@ mod shared;
 use anyhow::Result;
 use shared::config::Config;
 use tracing_subscriber::EnvFilter;
+use axum::{Router, routing::get};
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -16,7 +17,14 @@ async fn main() -> Result<()> {
         .init();
 
     let addr = config.bind_addr();
-    tracing::info!(%addr, "starting server");
+    tracing::info!("starting server: http://{}", addr);
+
+    let app = Router::new()
+        .route("/", get(|| async { "Hello, rust!" }))
+        .route("/axum", get(|| async { "Hello, axum!" }));
+
+    let listener = tokio::net::TcpListener::bind(config.bind_addr()).await?;
+    axum::serve(listener, app).await.unwrap();
 
     Ok(())
 }
