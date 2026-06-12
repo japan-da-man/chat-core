@@ -37,7 +37,7 @@ Rust プロジェクトの土台を作り、以降の schema / command / query �
 - [x] `RUST_LOG`
 - [x] `APP_ENV`
 - [x] `SEARCH_BACKEND`
-- [ ] `main.rs` でアプリ起動、router 初期化、graceful shutdown の土台を書く
+- [x] `main.rs` でアプリ起動、router 初期化、graceful shutdown の土台を書く
 - [ ] request id / tracing / CORS / compression の middleware 配置方針を決める
 - [ ] `cargo fmt`、`cargo clippy`、`cargo test` を実行しやすい状態にする
 
